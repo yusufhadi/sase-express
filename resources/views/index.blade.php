@@ -19,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <title>SASE Express</title>
+
+
+
 </head>
 
 <body>
@@ -36,13 +39,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Visi dan Misi</a>
+                        <a class="nav-link" href="#visi">Visi dan Misi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pelayanan</a>
+                        <a class="nav-link" href="#pelayanan">Pelayanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang</a>
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -71,11 +77,9 @@
                             </p>
                         </div>
                         <div class="col-lg-6 col-12 ">
-                            <div class="wrapper-two-images text-center wow slideInUp" data-wow-delay=".6s">
-                                <a href="#">
-                                    <img src="{{ url('/images/cargooo.png') }}" class="img-fluid" alt="">
-                                </a>
-                            </div>
+                            <a href="#">
+                                <img src="{{ url('/images/cargooo.png') }}" class="img-fluid" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -84,8 +88,7 @@
         </div>
     </section>
 
-
-    <section class="testimonials">
+    <section class="testimonials" id="visi">
         <div class="container">
             <div class="row text-center pb-3">
                 <div class="col-lg-12 col-12 header-wrap">
@@ -100,7 +103,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-12">
                     <div class="row">
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-6 col-12 pb-4">
                             <div class="item-review">
                                 <h3 class="title text-center">
                                     Visi
@@ -136,25 +139,45 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pelayanan">
         <div class="container">
             <h3 class="primary-header text-center text-white pb-5">
                 Pelayanan SASE EXPRESS
             </h3>
             <div class="row">
-                <div class="col-lg-5 col-12">
+                <div class="col-lg-12 col-12">
                     <h4 class="text-white">
                         Kirim Barang
                     </h4>
                     <div class="row">
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-4 col-12">
                             <label for="exampleInputEmail1" class="form-label">Kota Asal</label>
                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" readonly placeholder="Makassar">
                         </div>
-                        <div class="col-lg-6 col-12">
-                            <label for="exampleInputEmail1" class="form-label">Kota Tujuan</label>
-                            <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="col-lg-4 col-12 pb-3">
+                            <label for="form_name" class="form-label">Kota Tujuan</label>
+                            <select class="bootstrap-select form-select">
+                                <option value="1" selected="selected">Silahkan Pilih Kota</option>
+                                <option value="2">Jakarta</option>
+                                <option value="3">Jogjakarta</option>
+                                <option value="4">Surabaya</option>
+                                <option value="5">Manokwari</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div>
+                                <textarea readonly id="2">Rp.55.000/Kg  MINIMUM 10 KG </textarea>
+                            </div>
+                            <div>
+                                <textarea readonly id="3">Rp.65.000/Kg  MINIMUM 10 KG </textarea>
+                            </div>
+                            <div>
+                                <textarea readonly id="4">Rp.35.000/Kg  MINIMUM 10 KG </textarea>
+                            </div>
+                            <div>
+                                <textarea readonly id="5">Rp.150.000/Kg  MINIMUM 10 KG </textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,7 +185,7 @@
             <div class="row pb-70">
                 <div class="col-lg-5 col-12 header-wrap copywriting">
                     <h4 class=" text-white">
-                        Lacak Lokasi Barang
+                        Lacak Kiriman Anda
                     </h4>
                     <div class="row">
                         <div class="col-lg-6 col-12">
@@ -172,7 +195,7 @@
                         </div>
                         <div class="col-lg-6 col-12">
                             <p>
-                                <a href="#" class="btn btn-master btn-secondary w-70 ">
+                                <a href="{{ route('cari') }}" class="btn btn-master btn-secondary w-70 ">
                                     Cari
                                 </a>
                             </p>
@@ -183,7 +206,7 @@
         </div>
     </section>
 
-    <section class="steps ">
+    <section class="steps" id="tentang">
         <div class="container">
             <h2 class="primary-header text-orange text-center pb-3">
                 Kenapa Memilih SASE Express?
@@ -193,7 +216,7 @@
                 pelayanan dengan menjaga dan bertanggung jawab atas kondisi distribusi muatan pelanggan” dengan sistem
                 manajemen yang professional dalam melakukan beberapa langkah atau strategi antara lain sebagai berikut:
             </h3>
-            <div class="row item-step pb-70">
+            <div class="row item-step">
                 <div class="col-lg-6 col-12 text-center">
                     <img src="{{ url('/images/1.png') }}" class="cover" alt="">
                 </div>
@@ -208,7 +231,7 @@
                 </div>
             </div>
             <div class="row item-step pb-70">
-                <div class="col-lg-6 col-12 text-left copywriting pl-150">
+                <div class="col-lg-6 col-12 text-left copywriting">
                     <br>
                     <h2 class="primary-header">
                         Customer Service
@@ -218,7 +241,7 @@
                         terutama dalam peristiwa yang penting dan mendesak
                     </p>
                 </div>
-                <div class="col-lg-6 col-12 text-center">
+                <div class="col-lg-6 col-12 text-center pb-5">
                     <img src="{{ url('/images/4.png') }}" class="cover" alt="">
                 </div>
             </div>
@@ -239,7 +262,7 @@
                 </div>
             </div>
             <div class="row item-step pb-70">
-                <div class="col-lg-6 col-12 text-left copywriting pl-150">
+                <div class="col-lg-6 col-12 text-left copywriting">
                     <br>
                     <h2 class="primary-header">
                         Kontroling
@@ -256,7 +279,7 @@
     </section>
 
 
-    <footer class="footer-area footer-area-two bg--section2">
+    <footer class="footer-area footer-area-two bg--section2" id="kontak">
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -312,6 +335,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $('textarea').hide();
+        $('#1').show();
+        $('select').change(function() {
+            $('textarea').hide();
+            var a = $(this).val();
+            $("#" + a).show();
+        })
+    </script>
+    @include('sweetalert::alert')
 
 </body>
 
